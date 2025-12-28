@@ -7,7 +7,7 @@ A comprehensive web application implementing multiple encryption algorithms for 
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#-features)
 - [Live Demo](#-live-demo)
@@ -20,9 +20,9 @@ A comprehensive web application implementing multiple encryption algorithms for 
 - [License](#-license)
 - [Author](#-author)
 
-## ✨ Features
+## Features
 
-### 📝 Text Encryption Algorithms
+### Text Encryption Algorithms
 
 **Classical Ciphers:**
 - Transposition Cipher
@@ -36,29 +36,29 @@ A comprehensive web application implementing multiple encryption algorithms for 
 - AES (Advanced Encryption Standard)
 - RSA (Public-Key Cryptography)
 
-### 🖼️ Image Encryption
+### Image Encryption
 
 - Chaotic Image Encryption using logistic map
 - Supports both RGB and grayscale images
 - Lossless encryption/decryption
 - Download encrypted/decrypted images
 
-### 🎯 Key Features
+### Key Features
 
-- ✅ **Interactive Web Interface**: Built with Streamlit for easy access
-- ✅ **Real-time Encryption/Decryption**: Instant results with visual feedback
-- ✅ **Educational Focus**: Detailed explanations for each algorithm
-- ✅ **Clean Design**: Professional and intuitive user interface
-- ✅ **Cross-platform**: Works on any device with a web browser
-- ✅ **No Installation Required**: Run locally or deploy to cloud
+- **Interactive Web Interface**: Built with Streamlit for easy access
+- **Real-time Encryption/Decryption**: Instant results with visual feedback
+- **Educational Focus**: Detailed explanations for each algorithm
+- **Clean Design**: Professional and intuitive user interface
+- **Cross-platform**: Works on any device with a web browser
+- **No Installation Required**: Run locally or deploy to cloud
 
-## 🚀 Live Demo
+## Live Demo
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
 
 > **Note:** Replace with your actual deployment URL
 
-## 💻 Installation
+## Installation
 
 ### Prerequisites
 
@@ -100,7 +100,7 @@ streamlit run app.py
 
 5. **Open your browser** and navigate to `http://localhost:8501`
 
-## 🎮 Usage
+##  Usage
 
 ### Running the Application
 
@@ -127,7 +127,7 @@ streamlit run app.py
 5. Download the encrypted image
 6. Use the same key to decrypt
 
-## 🔢 Algorithms
+##  Algorithms
 
 ### Text Encryption Algorithms
 
@@ -183,15 +183,34 @@ streamlit run app.py
   4. Lossless recovery with same key
 - **Features:** Supports RGB and grayscale, preserves dimensions
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
-encryption-suite/
-├── app.py                      # Main Streamlit application
-├── requirements.txt            # Python dependencies
-├── .gitignore                 # Git ignore rules
-├── README.md                  # This file
-└── LICENSE                    # MIT License
+multi-encryption-suite/
+│
+├── app.py                    # Main Streamlit app
+├── utils.py                  # Common utility functions
+├── requirements.txt          # Dependencies
+│
+├── text_encryption/
+│   ├── __init__.py
+│   ├── transposition.py
+│   ├── caesar.py
+│   ├── affine.py
+│   ├── hill.py
+│   ├── vigenere.py
+│   ├── des.py
+│   ├── aes.py
+│   └── rsa.py
+│
+├── image_encryption/
+│   ├── __init__.py
+│   └── chaotic_encryption.py
+│
+└── pages/
+    ├── Home.py
+    ├── text_Encryption.py
+    └── image_Encryption.py
 ```
 
 ### Key Files
@@ -200,20 +219,22 @@ encryption-suite/
 - **requirements.txt**: Lists all Python dependencies
 - **README.md**: Project documentation
 
-## 📸 Screenshots
+##  Screenshots
+### App interface
+![Home Page](screenshots/app.png)
 
 ### Home Interface
 ![Home Page](screenshots/home.png)
 
 ### Text Encryption (Hill Cipher)
-![Hill Cipher](screenshots/hill-cipher.png)
+![Hill Cipher](screenshots/text_encryption_example.png)
 
 ### Image Encryption
-![Image Encryption](screenshots/image-encryption.png)
+![Image Encryption](screenshots/image-encryption.mp4)
 
 > **Note:** Add actual screenshots to a `screenshots/` directory
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -243,29 +264,23 @@ git push origin feature/AmazingFeature
 - Update documentation as needed
 - Test your changes thoroughly
 
-## ⚠️ Important Security Notice
+## Important Security Notice
 
 > **This application is for EDUCATIONAL PURPOSES ONLY.**
 
 ### Security Limitations:
-- ❌ Simplified implementations are NOT cryptographically secure
-- ❌ Do NOT use for real-world sensitive data
-- ❌ Algorithms use reduced key sizes and simplified operations
-- ❌ For production use, always use verified cryptographic libraries
+- Simplified implementations are NOT cryptographically secure
+- Do NOT use for real-world sensitive data
+- Algorithms use reduced key sizes and simplified operations
+- For production use, always use verified cryptographic libraries
 
 ### Recommended for Real Applications:
-- ✅ **Text:** Use `cryptography` library (proper AES, RSA implementations)
-- ✅ **Images:** Use OpenCV with proper encryption standards
-- ✅ **General:** Use established libraries like `PyCryptodome`, `NaCl`
+- **Text:** Use `cryptography` library (proper AES, RSA implementations)
+- **Images:** Use OpenCV with proper encryption standards
+- **General:** Use established libraries like `PyCryptodome`, `NaCl`
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2024 [Your Name]
+Copyright (c) 2025 [Amine EL HANINE]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -286,46 +301,85 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## 👨‍💻 Author
+## Author
 
 **Your Name**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [@yourusername](https://github.com/l7a9)
+- Email: melhanineamine@gmail.com
+- LinkedIn: [Your Profile](https://www.linkedin.com/in/amine-el-hanine-88689a330/)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Streamlit team for the amazing framework
 - Cryptography community for algorithm references
 - Open source contributors who make education accessible
 - Professors and educators in the field of cryptography
 
-## 📚 Learning Resources
 
-- [Cryptography I - Stanford University (Coursera)](https://www.coursera.org/learn/crypto)
-- [Applied Cryptography - University of Maryland](https://www.coursera.org/learn/cryptography)
-- [The Code Book by Simon Singh](https://en.wikipedia.org/wiki/The_Code_Book)
-- [Crypto 101 - Introductory cryptography course](https://www.crypto101.io/)
+**If you find this project useful, please give it a star on GitHub!**
 
 ---
 
-⭐ **If you find this project useful, please give it a star on GitHub!** ⭐
-
----
-
-### 📝 Requirements.txt
+### Requirements.txt
 
 Create a `requirements.txt` file with the following dependencies:
 
 ```
-streamlit>=1.28.0
-numpy>=1.24.0
-pandas>=2.0.0
-Pillow>=10.0.0
+altair==6.0.0
+attrs==25.4.0
+blinker==1.9.0
+cachetools==6.2.4
+certifi==2025.11.12
+charset-normalizer==3.4.4
+click==8.3.1
+contourpy==1.3.3
+cycler==0.12.1
+Flask==3.1.2
+fonttools==4.61.1
+gitdb==4.0.12
+GitPython==3.1.45
+idna==3.11
+itsdangerous==2.2.0
+Jinja2==3.1.6
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+kiwisolver==1.4.9
+MarkupSafe==3.0.3
+matplotlib==3.10.8
+mpmath==1.3.0
+narwhals==2.14.0
+numpy==2.2.6
+opencv-python==4.12.0.88
+packaging==25.0
+pandas==2.3.3
+pillow==12.0.0
+protobuf==6.33.2
+pyarrow==22.0.0
+pycryptodome==3.23.0
+pydeck==0.9.1
+pyparsing==3.3.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
+referencing==0.37.0
+requests==2.32.5
+rpds-py==0.30.0
+six==1.17.0
+smmap==5.0.2
+streamlit==1.52.2
+sympy==1.14.0
+tenacity==9.1.2
+toml==0.10.2
+tornado==6.5.4
+typing_extensions==4.15.0
+tzdata==2025.3
+urllib3==2.6.2
+watchdog==6.0.0
+Werkzeug==3.1.4
+
 ```
 
-### 🚀 Quick Start Commands
+###  Quick Start Commands
 
 ```bash
 # Clone and setup
