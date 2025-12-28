@@ -99,20 +99,20 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🔐 Text Encryption")
+st.title("Text Encryption")
 st.markdown("Select an encryption algorithm from the dropdown below.")
 st.markdown("---")
 
 # Algorithm selection
 algorithms = {
-    "Transposition Cipher": {"icon": "🔀", "desc": "Rearrange characters"},
-    "Caesar Cipher": {"icon": "🔢", "desc": "Shift letters"},
-    "Affine Cipher": {"icon": "📐", "desc": "Mathematical encryption"},
-    "Hill Cipher": {"icon": "🧮", "desc": "Matrix encryption"},
-    "Vigenere Cipher": {"icon": "🔠", "desc": "Keyword encryption"},
-    "DES (Simplified)": {"icon": "🔐", "desc": "Block cipher"},
-    "AES (Simplified)": {"icon": "🔒", "desc": "Advanced encryption"},
-    "RSA (Simplified)": {"icon": "🔑", "desc": "Public-key encryption"}
+    "Transposition Cipher": {"desc": "Rearrange characters"},
+    "Caesar Cipher": {"desc": "Shift letters"},
+    "Affine Cipher": {"desc": "Mathematical encryption"},
+    "Hill Cipher": {"desc": "Matrix encryption"},
+    "Vigenere Cipher": {"desc": "Keyword encryption"},
+    "DES (Simplified)": {"desc": "Block cipher"},
+    "AES (Simplified)": {"desc": "Advanced encryption"},
+    "RSA (Simplified)": {"desc": "Public-key encryption"}
 }
 
 selected_algo = st.selectbox(
@@ -122,7 +122,7 @@ selected_algo = st.selectbox(
 )
 
 # Show algorithm description
-st.markdown(f"**{algorithms[selected_algo]['icon']} {selected_algo}** - {algorithms[selected_algo]['desc']}")
+st.markdown(f"**{selected_algo}** - {algorithms[selected_algo]['desc']}")
 st.markdown("---")
 
 # Create two columns for encryption/decryption
@@ -486,7 +486,7 @@ elif selected_algo == "RSA (Simplified)":
 # ALGORITHM INFORMATION SECTION
 # ============================================
 st.markdown("---")
-with st.expander(f"📖 About {selected_algo}", expanded=True):
+with st.expander(f"About {selected_algo}", expanded=True):
     
     if selected_algo == "Transposition Cipher":
         st.markdown("""

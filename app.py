@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 def main():
-    st.title("🔐 Multi-Algorithm Encryption Suite")
+    st.title("Multi-Algorithm Encryption Suite")
     st.markdown("---")
     
     # Welcome message

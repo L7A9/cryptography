@@ -53,7 +53,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🖼️ Image Encryption")
+st.title("Image Encryption")
 st.markdown("Encrypt and decrypt images using XOR-based encryption with SHA-256 key hashing.")
 st.markdown("---")
 
@@ -106,7 +106,7 @@ if uploaded_file is not None:
         
         # Encryption section
         st.markdown('<div class="section-box">', unsafe_allow_html=True)
-        st.markdown("#### 🔒 Encryption")
+        st.markdown("#### Encryption")
         
         enc_key = st.text_input("**Encryption Key:**", "MySecretKey123", 
                                help="Enter a secret key for encryption")
@@ -159,7 +159,7 @@ if uploaded_file is not None:
                         
                         # Download button
                         st.download_button(
-                            label="**📥 Download Encrypted Image**",
+                            label="**Download Encrypted Image**",
                             data=encrypted_bytes,
                             file_name="encrypted_image.png",
                             mime="image/png",
@@ -167,22 +167,22 @@ if uploaded_file is not None:
                         )
                         
                         st.markdown('<div class="success-box">', unsafe_allow_html=True)
-                        st.success("✅ Image encrypted successfully!")
+                        st.success("Image encrypted successfully!")
                         st.markdown('</div>', unsafe_allow_html=True)
                         
                     except Exception as e:
-                        st.error(f"❌ Encryption failed: {str(e)}")
+                        st.error(f"Encryption failed: {str(e)}")
             else:
-                st.warning("⚠️ Please enter an encryption key.")
+                st.warning("Please enter an encryption key.")
         
         st.markdown('</div>', unsafe_allow_html=True)
     
     except Exception as e:
-        st.error(f"❌ Error loading image: {str(e)}")
+        st.error(f"Error loading image: {str(e)}")
 
 # Decryption section
 st.markdown('<div class="section-box">', unsafe_allow_html=True)
-st.markdown("#### 🔓 Decryption")
+st.markdown("#### Decryption")
 
 # Option to use previously encrypted image
 if 'encrypted_array' in st.session_state:
@@ -236,12 +236,12 @@ if 'encrypted_array' in st.session_state:
                         
                         if is_perfect:
                             st.markdown('<div class="success-box">', unsafe_allow_html=True)
-                            st.success("✅ Perfect decryption! Original image recovered exactly.")
+                            st.success("Perfect decryption! Original image recovered exactly.")
                             st.markdown('</div>', unsafe_allow_html=True)
                         else:
                             # Calculate difference
                             diff = np.sum(np.abs(original_array.astype(int) - decrypted_array.astype(int)))
-                            st.warning(f"⚠️ Decryption not perfect. Total pixel difference: {diff}")
+                            st.warning(f"Decryption not perfect. Total pixel difference: {diff}")
                             
                             # Show difference (for debugging)
                             with st.expander("Show Difference Analysis"):
@@ -261,7 +261,7 @@ if 'encrypted_array' in st.session_state:
                     decrypted_bytes = buf.getvalue()
                     
                     st.download_button(
-                        label="**📥 Download Decrypted Image**",
+                        label="**Download Decrypted Image**",
                         data=decrypted_bytes,
                         file_name="decrypted_image.png",
                         mime="image/png",
@@ -269,11 +269,11 @@ if 'encrypted_array' in st.session_state:
                     )
                     
                 except Exception as e:
-                    st.error(f"❌ Decryption failed: {str(e)}")
+                    st.error(f"Decryption failed: {str(e)}")
         else:
-            st.warning("⚠️ Please enter the decryption key.")
+            st.warning("Please enter the decryption key.")
 else:
-    st.info("👆 Encrypt an image first, then you can decrypt it here.")
+    st.info("Encrypt an image first, then you can decrypt it here.")
 
 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -329,7 +329,7 @@ if uploaded_encrypted:
                         decrypted_bytes = buf.getvalue()
                         
                         st.download_button(
-                            label="**📥 Download Decrypted Image**",
+                            label="**Download Decrypted Image**",
                             data=decrypted_bytes,
                             file_name="decrypted_uploaded_image.png",
                             mime="image/png",
@@ -337,18 +337,18 @@ if uploaded_encrypted:
                         )
                         
                     except Exception as e:
-                        st.error(f"❌ Decryption failed: {str(e)}")
+                        st.error(f"Decryption failed: {str(e)}")
             else:
-                st.warning("⚠️ Please enter the decryption key.")
+                st.warning("Please enter the decryption key.")
                 
     except Exception as e:
-        st.error(f"❌ Error loading encrypted image: {str(e)}")
+        st.error(f"Error loading encrypted image: {str(e)}")
 
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Test section
 st.markdown('<div class="section-box">', unsafe_allow_html=True)
-st.markdown("#### 🧪 Test & Verify")
+st.markdown("#### Test & Verify")
 
 if st.button("**Run Encryption/Decryption Test**", use_container_width=True):
     # Create a simple test image
@@ -391,7 +391,7 @@ if st.button("**Run Encryption/Decryption Test**", use_container_width=True):
         
         if is_perfect:
             st.markdown('<div class="success-box">', unsafe_allow_html=True)
-            st.success("✅ **TEST PASSED:** Perfect encryption and decryption!")
+            st.success("**TEST PASSED:** Perfect encryption and decryption!")
             st.write("All pixels match exactly. The algorithm is working correctly.")
             st.markdown('</div>', unsafe_allow_html=True)
         else:
@@ -399,7 +399,7 @@ if st.button("**Run Encryption/Decryption Test**", use_container_width=True):
             diff = np.sum(np.abs(test_image.astype(int) - decrypted_test.astype(int)))
             diff_percent = (diff / test_image.size) * 100
             
-            st.error(f"❌ **TEST FAILED:** Total pixel difference = {diff}")
+            st.error(f"**TEST FAILED:** Total pixel difference = {diff}")
             st.error(f"Difference percentage: {diff_percent:.6f}%")
             
             # Show difference image
@@ -411,7 +411,7 @@ if st.button("**Run Encryption/Decryption Test**", use_container_width=True):
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Information section
-with st.expander("📚 How It Works", expanded=False):
+with st.expander("How It Works", expanded=False):
     st.markdown("""
     ### XOR Image Encryption Algorithm
     

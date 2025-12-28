@@ -3,7 +3,7 @@ Home Page
 """
 import streamlit as st
 
-st.title("🏠 Home")
+st.title("Home")
 st.markdown("---")
 
 st.markdown("""
@@ -14,7 +14,7 @@ for educational and demonstration purposes.
 
 ### Features:
 
-#### 📝 Text Encryption Algorithms:
+#### Text Encryption Algorithms:
 1. **Classical Ciphers:**
    - Transposition Cipher
    - Caesar Cipher
@@ -27,7 +27,7 @@ for educational and demonstration purposes.
    - AES (Advanced Encryption Standard)
    - RSA (Public Key Cryptography)
 
-#### 🖼️ Image Encryption Algorithms:
+#### Image Encryption Algorithms:
 1. **Chaotic Image Encryption:**
    - Based on Logistic Map and PWLCM
    - Combines substitution and permutation
@@ -47,7 +47,7 @@ This application is designed for:
 4. Experiment with different keys and parameters
 
 ### Security Note:
-⚠️ **Important:** This application is for educational purposes only. 
+**Important:** This application is for educational purposes only. 
 The simplified implementations are not suitable for real-world security applications.
 """)
 
