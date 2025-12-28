@@ -16,13 +16,13 @@
 !text_encryption/
 !image_encryption/
 !pages/
-!screenshots/
+!screenshot/
 
 # Allow all files inside these folders
 !text_encryption/**
 !image_encryption/**
 !pages/**
-!screenshots/**
+!screenshot/**
 
 # Block specific patterns even inside allowed folders
 **/__pycache__/
