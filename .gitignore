@@ -7,6 +7,10 @@
 !requirements.txt
 !app.py
 !utils.py
+!app.png
+!home.png
+!image_encryption.pm4
+!text_encryption.png
 
 # Allow these folders
 !text_encryption/
