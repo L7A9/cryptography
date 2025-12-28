@@ -1,0 +1,31 @@
+# Block everything first
+*
+
+# Allow these specific files
+!.gitignore
+!README.md
+!requirements.txt
+!app.py
+!utils.py
+
+# Allow these folders
+!text_encryption/
+!image_encryption/
+!pages/
+
+# Allow all files inside these folders
+!text_encryption/**
+!image_encryption/**
+!pages/**
+
+# Block specific patterns even inside allowed folders
+**/__pycache__/
+**/.DS_Store
+**/Thumbs.db
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+.vscode/
+.idea/
