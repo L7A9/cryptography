@@ -221,18 +221,18 @@ multi-encryption-suite/
 
 ##  Screenshots
 ### App interface
-![Home Page](screenshots/app.png)
+![Home Page](screenshot/app.png)
 
 ### Home Interface
-![Home Page](screenshots/home.png)
+![Home Page](screenshot/home.png)
 
 ### Text Encryption (Hill Cipher)
-![Hill Cipher](screenshots/text_encryption_example.png)
+![Hill Cipher](screenshot/text_encryption_example.png)
 
 ### Image Encryption
-![Image Encryption](screenshots/image-encryption.mp4)
+![Image Encryption](screenshot/image-encryption.mp4)
 
-> **Note:** Add actual screenshots to a `screenshots/` directory
+> **Note:** Add actual screenshots to a `screenshot/` directory
 
 ##  Contributing
 
